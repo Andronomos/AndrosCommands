@@ -1,11 +1,11 @@
 # Andro's Commands
 
-### /randomcrate
+### /fishingcrate
 Opens a random fishing crate.
 
 #### Usage:
 ```
-/randomcrate <type> <amount>
+/fishingcrate <type> <amount>
 ```
 #### Arguments
 - type - The type of crate to open.
