@@ -10,3 +10,5 @@
 #### Arguments
 - type - The type of crate to open.
 - - Possible values: normal|hard|both
+
+---
