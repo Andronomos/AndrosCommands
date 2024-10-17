@@ -1,7 +1,7 @@
 # Andro's Commands
 
 ### /randomcrate
-
+Opens a random fishing crate.
 
 #### Usage:
 ```
