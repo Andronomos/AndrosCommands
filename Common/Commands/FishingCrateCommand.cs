@@ -6,15 +6,15 @@ using Terraria.ModLoader;
 
 namespace AndrosCommands.Common.Commands;
 
-public class OpenRandomCrateCommand : ModCommand
+public class FishingCrateCommand : ModCommand
 {
     private readonly Random _random = new();
 
-    public override string Command => "randomcrate";
+    public override string Command => "fishingcrate";
 
     public override CommandType Type => CommandType.World;
 
-    public override string Usage => "/randomcrate <normal|hard|both> <amount>";
+    public override string Usage => "/fishingcrate <normal|hard|both> <amount>";
 
     public override string Description => "Opens a random crate";
 
