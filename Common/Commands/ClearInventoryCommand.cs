@@ -28,8 +28,6 @@ public class ClearInventoryCommand : ModCommand
             }
         }
 
-        BroadcastUtils.BroadcastInfo($"{player.inventory.Length}");
-
         for (int i = 0; i < player.inventory.Length; i++)
         {
             Item item = player.inventory[i];
