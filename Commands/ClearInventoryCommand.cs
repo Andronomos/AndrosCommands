@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Common.Commands;
+namespace AndrosCommands.Commands;
 
 public class ClearInventoryCommand : ModCommand
 {
@@ -20,7 +20,7 @@ public class ClearInventoryCommand : ModCommand
         Player player = caller.Player;
         bool clearAll = false;
 
-        if (args.Length  > 0)
+        if (args.Length > 0)
         {
             if (!string.IsNullOrEmpty(args[0]))
             {

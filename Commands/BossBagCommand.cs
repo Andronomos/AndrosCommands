@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Common.Commands;
+namespace AndrosCommands.Commands;
 
 public class BossBagCommand : ModCommand
 {
@@ -21,7 +21,7 @@ public class BossBagCommand : ModCommand
         int amount = 1;
         List<int> bags = ItemIdUtils.GetItemsInSet(ItemID.Sets.BossBag);
 
-        if (!string.IsNullOrEmpty(args[0]))
+        if (args.Length > 0)
         {
             if (!int.TryParse(args[0], out amount))
             {

@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Common.Commands;
+namespace AndrosCommands.Commands;
 
 public class FishingCrateCommand : ModCommand
 {
@@ -44,13 +44,13 @@ public class FishingCrateCommand : ModCommand
                     throw new UsageException($"Amount value must be integer, but met: {args[1]}");
                 }
             }
-        } 
+        }
 
         for (int i = 0; i < amountToOpen; i++)
         {
             int chosenCrate = crates[_random.Next(0, crates.Count)];
             BroadcastUtils.BroadcastInfo($"Opening {Lang.GetItemNameValue(chosenCrate)}");
             caller.Player.OpenFishingCrate(chosenCrate);
-        }      
+        }
     }
 }
