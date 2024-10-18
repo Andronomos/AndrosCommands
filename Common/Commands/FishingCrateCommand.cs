@@ -14,44 +14,39 @@ public class FishingCrateCommand : ModCommand
 
     public override CommandType Type => CommandType.World;
 
-    public override string Usage => "/fishingcrate <normal|hard|both> <amount>";
+    public override string Usage => "/fishingcrate <normal|hard> <amount>";
 
     public override string Description => "Opens a random crate";
 
     public override void Action(CommandCaller caller, string input, string[] args)
     {
-        int amount = 1;
-        List<int> crates = [];
+        int amountToOpen = 1;
+        List<int> crates = ItemIdUtils.GetItemsInSets([ItemID.Sets.IsFishingCrate, ItemID.Sets.IsFishingCrateHardmode]);
 
-        if (!string.IsNullOrEmpty(args[0]))
+        if (args.Length > 0)
         {
-            string chosenType = args[0].ToLower();
-
-            switch (chosenType)
+            if (!int.TryParse(args[0], out amountToOpen))
             {
-                case "normal":
-                    crates = ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrate);
-                    break;
-                case "hard":
-                    crates = ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrateHardmode);
-                    break;                                    
-                case "both":
-                default:
-                    crates = ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrate);
-                    crates.AddRange(ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrateHardmode));
-                    break;
-            }
-        }
+                amountToOpen = 1;
+                string chosenType = args[0].ToLower();
 
-        if (args.Length == 2)
-        {
-            if (!int.TryParse(args[1], out amount))
+                crates = chosenType switch
+                {
+                    "hard" => ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrateHardmode),
+                    _ => ItemIdUtils.GetItemsInSet(ItemID.Sets.IsFishingCrate),
+                };
+            }
+
+            if (args.Length == 2)
             {
-                throw new UsageException($"Amount value must be integer, but met: {args[1]}");
+                if (!int.TryParse(args[1], out amountToOpen))
+                {
+                    throw new UsageException($"Amount value must be integer, but met: {args[1]}");
+                }
             }
-        }
+        } 
 
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < amountToOpen; i++)
         {
             int chosenCrate = crates[_random.Next(0, crates.Count)];
             BroadcastUtils.BroadcastInfo($"Opening {Lang.GetItemNameValue(chosenCrate)}");
