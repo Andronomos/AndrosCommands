@@ -43,7 +43,7 @@ public class TimeCommand : ModCommand
                     break;
                 case "freeze":
                     AndroCommandSystem.TimeIsFrozen = !AndroCommandSystem.TimeIsFrozen;
-                    BroadcastUtils.BroadcastInfo($"Time {(AndroCommandSystem.TimeIsFrozen ? "frozen" : "unfroze")}");
+                    ChatUtils.DisplayInfo(ChatUtils.AsLiteral($"Time {(AndroCommandSystem.TimeIsFrozen ? "frozen" : "unfroze")}"));
                     break;
             }
         }
@@ -68,6 +68,6 @@ public class TimeCommand : ModCommand
             AndroCommandSystem.TimeIsFrozen = true;
         }
 
-        BroadcastUtils.BroadcastInfo("Time updated");
+        ChatUtils.DisplayInfo(ChatUtils.AsLiteral("Time updated"));
     }
 }

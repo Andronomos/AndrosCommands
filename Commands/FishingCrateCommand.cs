@@ -50,7 +50,7 @@ public class FishingCrateCommand : ModCommand
         for (int i = 0; i < amountToOpen; i++)
         {
             int chosenCrate = crates[_random.Next(0, crates.Count)];
-            BroadcastUtils.BroadcastInfo($"Opening {Lang.GetItemNameValue(chosenCrate)}");
+            ChatUtils.DisplayInfo(ChatUtils.AsLiteral($"Opening {Lang.GetItemNameValue(chosenCrate)}"));
             caller.Player.OpenFishingCrate(chosenCrate);
         }
     }

@@ -33,7 +33,7 @@ public class BossBagCommand : ModCommand
         for (int i = 0; i < amount; i++)
         {
             int chosenBag = bags[_random.Next(0, bags.Count)];
-            BroadcastUtils.BroadcastInfo($"Opening {Lang.GetItemNameValue(chosenBag)}");
+            ChatUtils.DisplayInfo(ChatUtils.AsLiteral($"Opening {Lang.GetItemNameValue(chosenBag)}"));
             caller.Player.OpenBossBag(chosenBag);
         }
     }
