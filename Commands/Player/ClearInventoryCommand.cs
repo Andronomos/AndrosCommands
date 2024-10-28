@@ -17,7 +17,7 @@ public class ClearInventoryCommand : ModCommand
 
     public override void Action(CommandCaller caller, string input, string[] args)
     {
-        Player player = caller.Player;
+        Terraria.Player player = caller.Player;
         bool clearAll = false;
 
         if (args.Length > 0)
