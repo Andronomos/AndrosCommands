@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using AndrosCommands.Common;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace AndrosCommands.Commands;
@@ -6,6 +7,10 @@ namespace AndrosCommands.Commands;
 
 public class TimeCommand : ModCommand
 {
+    private const int TimeMorning = 9000; //7am
+    private const int TimeNoon = 27000; //12pm
+    private const int TimeNight = 1800; //8pm
+
     public override string Command => "time";
 
     public override CommandType Type => CommandType.World;
@@ -16,26 +21,52 @@ public class TimeCommand : ModCommand
 
     public override void Action(CommandCaller caller, string input, string[] args)
     {
+        int newTime = 0;
+        bool isDayTime = false;
+
         if (args.Length > 0)
         {
             switch (args[0].ToLower())
             {
                 case "morning":
-                    Main.dayTime = true;
-                    Main.time = 9000; //7am
-                    //Main.time = 12600; //8am
+                    isDayTime = true;
+                    newTime = TimeMorning;
                     break;
                 case "noon":
-                    Main.dayTime = true;
-                    Main.time = 27000; //Noon
+                    isDayTime = true;
+                    newTime = TimeNoon;
                     break;
                 case "night":
-                    Main.dayTime = false;
-                    Main.time = 1800; //8pm
+                    isDayTime = false;
+                    newTime = TimeNight;
                     break;
                 case "freeze":
+                    AndroCommandSystem.TimeIsFrozen = !AndroCommandSystem.TimeIsFrozen;
+                    BroadcastUtils.BroadcastInfo("Time frozen");
                     break;
             }
         }
+
+        if (newTime == 0)
+        {
+            return;
+        }
+
+        bool timeIsFrozen = AndroCommandSystem.TimeIsFrozen;
+        
+        //unfreeze time so we can change it
+        AndroCommandSystem.TimeIsFrozen = false;
+
+        //set the time
+        Main.dayTime = isDayTime;
+        Main.time = newTime;
+
+        //if time was frozen, refreeeze at new time
+        if (timeIsFrozen)
+        {
+            AndroCommandSystem.TimeIsFrozen = true;
+        }
+
+        BroadcastUtils.BroadcastInfo("Time updated");
     }
 }
