@@ -42,7 +42,7 @@ public class TimeCommand : ModCommand
                     break;
                 case "freeze":
                     AndroCommandSystem.TimeIsFrozen = !AndroCommandSystem.TimeIsFrozen;
-                    BroadcastUtils.BroadcastInfo("Time frozen");
+                    BroadcastUtils.BroadcastInfo($"Time {(AndroCommandSystem.TimeIsFrozen ? "frozen" : "unfroze")}");
                     break;
             }
         }
