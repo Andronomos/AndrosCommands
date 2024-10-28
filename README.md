@@ -5,19 +5,18 @@ A Terraria mod that adds random commands for performing useful tasks, debugging 
 
 ## Commands
 
-### fishingcrate
-Opens a random fishing crate.
+### time
+Changes or freezes the time of day
 
 #### Usage:
 ```
-/fishingcrate <type> <amount>
+/time <morning|noon|night|freeze>
 ```
 #### Arguments
-- type - The type of crate to open.
-  - normal - A normal pre-hardmode fishing crate
-  - hard - A hardmode fishing crate
-  - both - either or
-- amount - The number of crates to open
+- morning - Sets the time to 7am
+- noon - Sets the time to 12pm
+- night - Set the time to 8pm
+- freeze - Freezes the time
 ---
 
 ### clearinventory
