@@ -19,6 +19,19 @@ Changes or freezes the time of day
 - freeze - Freezes time
 ---
 
+### weather
+Removes items from the player's inventory.
+
+#### Usage:
+```
+/weather <clear|rain|slime>
+```
+#### Arguments
+- clear - Cancels rain and slime rain
+- rain - Starts/stops rain
+- slime - Starts/stops slime rain
+---
+
 ### clearinventory
 Removes items from the player's inventory.
 
