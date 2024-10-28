@@ -28,8 +28,8 @@ Changes the weather.
 ```
 #### Arguments
 - clear - Cancels rain and slime rain
-- rain - Starts/stops rain
-- slime - Starts/stops slime rain
+- rain - Toggles rain
+- slime - Toggles slime rain
 ---
 
 ### clearinventory
