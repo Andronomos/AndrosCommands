@@ -24,10 +24,9 @@ Removes items from the player's inventory.
 
 #### Usage:
 ```
-/clearinventory <clear all>
+/clearinventory <true|false>
 ```
 #### Arguments
-- clear all - Whether or not to clear all items.
-  - true - Favorited items are removed
-  - false - Favorited items are ignored
+- true - Favorited items are removed
+- false - Favorited items are ignored
 ---
