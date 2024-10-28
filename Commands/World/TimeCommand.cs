@@ -5,7 +5,6 @@ using Terraria.ModLoader;
 
 namespace AndrosCommands.Commands.World;
 
-
 public class TimeCommand : ModCommand
 {
     private const int TimeMorning = 9000; //7am
