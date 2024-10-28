@@ -16,10 +16,6 @@ public class TimeCommand : ModCommand
 
     public override void Action(CommandCaller caller, string input, string[] args)
     {
-        //day
-        //night
-        //freeze
-
         if (args.Length > 0)
         {
             switch (args[0].ToLower())
@@ -41,11 +37,5 @@ public class TimeCommand : ModCommand
                     break;
             }
         }
-
-
-        //Main.dayTime = false;
-        //Main.time = Main.dayLength; //54000
-        //Main.time = Main.nightLength; //32400
-        //Main.time = 1800;
     }
 }
