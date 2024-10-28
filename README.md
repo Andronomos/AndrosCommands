@@ -1,5 +1,5 @@
 # Andro's Commands
-A Terraria mod that adds random commands for performing useful tasks, debugging features or just plain having fun.
+A Terraria mod that adds commands designed for creative builders and content creators.
 
 
 
@@ -16,11 +16,11 @@ Changes or freezes the time of day
 - morning - Sets the time to 7am
 - noon - Sets the time to 12pm
 - night - Set the time to 8pm
-- freeze - Freezes the time
+- freeze - Freezes time
 ---
 
 ### clearinventory
-Removes items from the players inventory.
+Removes items from the player's inventory.
 
 #### Usage:
 ```
