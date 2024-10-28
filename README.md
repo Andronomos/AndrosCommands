@@ -20,7 +20,7 @@ Changes or freezes the time of day
 ---
 
 ### weather
-Removes items from the player's inventory.
+Changes the weather.
 
 #### Usage:
 ```
