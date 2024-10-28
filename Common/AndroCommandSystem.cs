@@ -29,7 +29,7 @@ public class AndroCommandSystem : ModSystem
         if (_timeIsFrozen)
         {
             Main.time = _frozenTime;
-            NetMessage.SendData(MessageID.WorldData, -1, -1, (NetworkText)null, 0, 0f, 0f, 0f, 0, 0, 0);
+            NetMessage.SendData(MessageID.WorldData, -1, -1, null, 0, 0f, 0f, 0f, 0, 0, 0);
         }
     }
 }

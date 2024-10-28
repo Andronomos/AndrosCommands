@@ -3,7 +3,7 @@ using AndroTLib.Utils;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Commands;
+namespace AndrosCommands.Commands.World;
 
 
 public class TimeCommand : ModCommand
@@ -54,7 +54,7 @@ public class TimeCommand : ModCommand
         }
 
         bool timeIsFrozen = AndroCommandSystem.TimeIsFrozen;
-        
+
         //unfreeze time so we can change it
         AndroCommandSystem.TimeIsFrozen = false;
 

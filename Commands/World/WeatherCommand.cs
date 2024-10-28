@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Commands;
+namespace AndrosCommands.Commands.World;
 
 public class WeatherCommand : ModCommand
 {
@@ -12,12 +12,12 @@ public class WeatherCommand : ModCommand
 
     public override void Action(CommandCaller caller, string input, string[] args)
     {
-        if(args.Length == 0)
+        if (args.Length == 0)
         {
             return;
         }
 
-        switch(args[0].ToLower())
+        switch (args[0].ToLower())
         {
             case "clear":
                 Main.StopRain();

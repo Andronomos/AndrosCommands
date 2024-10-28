@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace AndrosCommands.Commands;
+namespace AndrosCommands.Commands.Player;
 
 public class ClearInventoryCommand : ModCommand
 {
