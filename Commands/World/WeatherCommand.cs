@@ -32,15 +32,14 @@ public class WeatherCommand : ModCommand
         }
     }
 
-    private void PerformConditionalAction(bool propertyToCheck, Action trueAction, Action falseAction2)
+    private void PerformConditionalAction(bool propertyToCheck, Action trueAction, Action falseAction)
     {
         if (propertyToCheck)
         {
             trueAction();
+            return;
         }
-        else
-        {
-            falseAction2();
-        }
+
+        falseAction();
     }
 }
