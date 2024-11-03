@@ -5,13 +5,11 @@ A Terraria mod that adds commands designed for creative builders and content cre
 
 ## Commands
 
-### time
-Changes or freezes the time of day
-
-#### Usage:
 ```
 /time <morning|noon|night|freeze>
 ```
+Changes or freezes the time of day
+
 #### Arguments
 - morning - Sets the time to 7am
 - noon - Sets the time to 12pm
@@ -19,27 +17,38 @@ Changes or freezes the time of day
 - freeze - Freezes time
 ---
 
-### weather
-Changes the weather.
-
-#### Usage:
 ```
 /weather <clear|rain|slime>
 ```
+Changes the weather.
+
 #### Arguments
 - clear - Cancels rain and slime rain
 - rain - Toggles rain
 - slime - Toggles slime rain
 ---
 
-### clearinventory
-Removes items from the player's inventory.
-
-#### Usage:
 ```
 /clearinventory <true|false>
 ```
+Removes items from the player's inventory.
+
 #### Arguments
 - true - Favorited items are removed
 - false - Favorited items are ignored
+---
+
+```
+/telepoi <poi>
+```
+Teleports the player to a point of interest.
+
+#### Arguments
+- Dungeon
+- Home
+- Living Tree
+- Meteorite
+- Spawn
+- Temple
+- Underworld
 ---
