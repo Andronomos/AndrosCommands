@@ -8,7 +8,7 @@ A Terraria mod that adds commands designed for creative builders and content cre
   - Removes items from the player's inventory.
   - #### Usage:
     ```
-    /clearinventory <true|false>
+    /clearinventory <arg>
     ```
   - #### Arguments
     - true - Favorited items are removed
@@ -35,7 +35,7 @@ A Terraria mod that adds commands designed for creative builders and content cre
   - Changes or freezes the time of day 
   - #### Usage:
     ```
-    /time <morning|noon|night|freeze>
+    /time <arg>
     ```
   - #### Arguments
     - morning - Sets the time to 7am
@@ -46,7 +46,7 @@ A Terraria mod that adds commands designed for creative builders and content cre
   - Changes the weather.
   - #### Usage:
     ```
-    /weather <clear|rain|slime>
+    /weather <arg>
     ```
   #### Arguments
   - clear - Cancels rain and slime rain
