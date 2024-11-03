@@ -3,9 +3,7 @@ A Terraria mod that adds commands designed for creative builders and content cre
 
 
 
-## Commands
-
-### time
+## time
 Changes or freezes the time of day
 
 #### Usage:
@@ -19,7 +17,7 @@ Changes or freezes the time of day
 - freeze - Freezes time
 ---
 
-### weather
+## weather
 Changes the weather.
 
 #### Usage:
@@ -32,7 +30,7 @@ Changes the weather.
 - slime - Toggles slime rain
 ---
 
-### clearinventory
+## clearinventory
 Removes items from the player's inventory.
 
 #### Usage:
@@ -44,7 +42,7 @@ Removes items from the player's inventory.
 - false - Favorited items are ignored
 ---
 
-### telepoi
+## telepoi
 Teleports the player to a point of interest.
 
 #### Usage:
