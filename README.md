@@ -23,8 +23,6 @@ A Terraria mod that adds commands designed for creative builders and content cre
   - #### Arguments
     - Dungeon
     - Home
-    - Living Tree
-    - Meteorite
     - Spawn
     - Temple
     - Underworld
